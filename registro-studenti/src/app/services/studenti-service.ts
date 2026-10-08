@@ -31,6 +31,10 @@ export class StudentiService {
     this.dati.update(lista => lista.filter(s => s.id !== id));
   }
 
+  aggiorna(modificato: Studente): void {
+    this.dati.update(lista => lista.map(s => (s.id === modificato.id ? modificato : s)));
+  }
+
   trova(id: number): Studente | undefined {
     return this.dati().find(s => s.id === id);
   }
