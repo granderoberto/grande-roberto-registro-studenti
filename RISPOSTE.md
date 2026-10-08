@@ -45,10 +45,10 @@ Esempio: ho 5 studenti con id da 1 a 5 e elimino Sara Rossi (id 2). Ne restano 4
 1. Premo un tasto, per esempio scrivo `4`, poi `A`.
 2. `[(ngModel)]` aggiorna il signal `filtroClasse` con il testo nuovo.
 3. Il computed `filtrati` legge `filtroClasse()`, quindi Angular sa che deve ricalcolarlo.
-4. `filtrati` toglie gli spazi, mette tutto maiuscolo e tiene gli studenti con quella classe. Con `4A` restano Marco Verdi e Giulia Neri.
+4. `filtrati` toglie gli spazi, mette tutto maiuscolo e tiene gli studenti con quella classe. Con `5BLSSA` restano Marco Verdi e Giulia Neri.
 5. Il template legge `filtrati()` e `visibili()`, quindi la tabella si aggiorna da sola.
 
-Se non c'è nessuno, compare l'avviso giallo, per esempio per `5C`.
+Se non c'è nessuno, compare l'avviso giallo, per esempio per `5AMEC`.
 
 ## 7. A che cosa servono #modulo="ngForm" e [disabled]="modulo.invalid"? Quali condizioni rendono il form non valido?
 

@@ -13,7 +13,7 @@ export class Inserimento {
   private readonly studentiService = inject(StudentiService);
   private readonly router = inject(Router);
   readonly nome = signal('');
-  readonly classe = signal('4B');
+  readonly classe = signal('5EINF');
   readonly media = signal(6);
 
   salva(): void {
