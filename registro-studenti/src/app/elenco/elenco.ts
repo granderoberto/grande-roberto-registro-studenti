@@ -20,6 +20,13 @@ export class Elenco {
     }
     return tutti.filter(s => s.classe.toUpperCase() === filtro);
   });
+  readonly mediaClasse = computed(() => {
+    const lista = this.filtrati();
+    if (lista.length === 0) {
+      return 0;
+    }
+    return lista.reduce((somma, s) => somma + s.mediaVoti, 0) / lista.length;
+  });
 
   rimuovi(id: number): void {
     this.studentiService.rimuovi(id);
